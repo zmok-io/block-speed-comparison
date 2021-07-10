@@ -52,7 +52,7 @@ function compareBlocks(refName, refCurrent, refCurrentTimestamp) {
 
   let lagTime = (current0 == refCurrent ? (refCurrentTimestamp - currentTimestamp0) / 1000 : undefined)
   log.info("" + (first ? "New" : "Received") + " block from " + refName + " #" + refCurrent +
-    (lag != 0 ? ", LAG: " + lag: "") + (lagTime ? ", LAG time: " + lagTime + " sec " : "") + (first ? " -> WINNER": ""));
+    (lag != 0 ? ", LAG blocks: " + lag: "") + (lagTime ? ", LAG time: " + lagTime + " sec " : "") + (first ? " -> WINNER": ""));
 }
 
 
