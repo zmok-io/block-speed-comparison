@@ -1,0 +1,19 @@
+{
+  "name": "block-speed-coparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "author": "",
+  "license": "Apache License Version 2.0",
+  "dependencies": {
+    "async": "^3.2.0",
+    "console-log-level": "^1.4.1",
+    "dotenv": "^10.0.0",
+    "node-jsonrpc-client": "^1.0.4",
+    "run-func": "^1.0.5",
+    "web3": "^1.4.0"
+  }
+}
