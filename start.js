@@ -85,8 +85,8 @@ const start = async () => {
 
   // JSON RPC providers
   while (true) {
-    [{"name": "ZMOK-FR", "url": process.env.ZMOK_FR_PROWIDER_URL},
-    {"name": "ZMOK", "url": process.env.ZMOK_PROWIDER_URL},
+    [{"name": "ZMOK-FR", "url": process.env.ZMOK_FR_PROVIDER_URL},
+    {"name": "ZMOK", "url": process.env.ZMOK_PROVIDER_URL},
     {"name": "INFURA", "url": process.env.INFURA_PROVIDER_URL},
     // {"name": "QUICKNODE", "url": "TODO"}
     ].forEach(async (k, i) => {
