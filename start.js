@@ -64,6 +64,7 @@ const start = async () => {
   {"name": "ZMOK-WS", "url": process.env.ZMOK_WS_PROVIDER_URL},
   {"name": "INFURA-WS", "url": process.env.INFURA_WS_PROVIDER_URL},
   {"name": "ALCHEMY-WS", "url": process.env.ALCHEMY_WS_PROVIDER_URL},
+  {"name": "MORALIS-WS", "url": process.env.MORALIS_WS_PROVIDER_URL},
     // {"name": "QUICKNODE", "url": "TODO"}
   ].forEach(async (k, i) => {
     let wsProvider = new Web3WsProvider(k.url, wsOptions);
@@ -85,9 +86,12 @@ const start = async () => {
 
   // JSON RPC providers
   while (true) {
-    [{"name": "ZMOK-FR", "url": process.env.ZMOK_FR_PROVIDER_URL},
+    [
+    {"name": "ZMOK-FR", "url": process.env.ZMOK_FR_PROVIDER_URL},
     {"name": "ZMOK", "url": process.env.ZMOK_PROVIDER_URL},
     {"name": "INFURA", "url": process.env.INFURA_PROVIDER_URL},
+    {"name": "ALCHEMY", "url": process.env.ALCHEMY_PROVIDER_URL},
+    {"name": "MORALIS", "url": process.env.MORALIS_PROVIDER_URL},
     // {"name": "QUICKNODE", "url": "TODO"}
     ].forEach(async (k, i) => {
       const client = new JsonRpc(k.url);

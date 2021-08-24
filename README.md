@@ -15,13 +15,16 @@ To run this project, make sure you have set correct API keys for endoints in you
 
 ```shell
 cat <<EOT >> .env
-ZMOK_FR_WS_PROVIDER_URL=wss://api.zmok.io/fr/<ZMOK_APP_ID>
-ZMOK_WS_PROVIDER_URL=wss://api.zmok.io/mainnet/<ZMOK_APP_ID>
-INFURA_WS_PROVIDER_URL=wss://mainnet.infura.io/ws/v3/<INFURA_API_KEY>
-ALCHEMY_WS_PROVIDER_URL=wss://eth-mainnet.ws.alchemyapi.io/v2/ALCHEMY_API_KEY>
-ZMOK_FR_PROVIDER_URL=https://api.zmok.io/fr/<ZMOK_APP_ID>
 ZMOK_PROVIDER_URL=https://api.zmok.io/mainnet/<ZMOK_APP_ID>
+ZMOK_WS_PROVIDER_URL=wss://api.zmok.io/mainnet/<ZMOK_APP_ID>
+ZMOK_FR_PROVIDER_URL=https://api.zmok.io/fr/<ZMOK_APP_ID>
+ZMOK_FR_WS_PROVIDER_URL=wss://api.zmok.io/fr/<ZMOK_APP_ID>
 INFURA_PROVIDER_URL=https://mainnet.infura.io/v3/<INFURA_API_KEY>
+INFURA_WS_PROVIDER_URL=wss://mainnet.infura.io/ws/v3/<INFURA_API_KEY>
+ALCHEMY_PROVIDER_URL=https://eth-mainnet.alchemyapi.io/v2/<ALCHEMY_API_KEY>
+ALCHEMY_WS_PROVIDER_URL=wss://eth-mainnet.ws.alchemyapi.io/v2/<ALCHEMY_API_KEY>
+MORALIS_PROVIDER_URL=https://speedy-nodes-nyc.moralis.io/<MORALIS_API_KEY>/eth/mainnet
+MORALIS_WS_PROVIDER_URL=wss://speedy-nodes-nyc.moralis.io/<MORALIS_API_KEY>/eth/mainnet/ws
 EOT
 ```
 
