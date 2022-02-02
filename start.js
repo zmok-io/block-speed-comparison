@@ -71,7 +71,7 @@ const start = async () => {
     const wsWeb3 = new Web3(wsProvider);
     wsWeb3.eth.subscribe('newBlockHeaders', (error, result) => {
       if (error) {
-        log.error(error);
+        log.error("provider: " + k.url + "error: " + error.message);
         throw error;
       }
       log.debug('WS connected, waiting to new block...');
@@ -81,6 +81,8 @@ const start = async () => {
         currents[k.name] = wsCurrent;
         compareBlocks(k.name, wsCurrent, Date.now())
       }
+    }).on('error', (e) => {
+      log.error("provider: " + k.url + "error: " + e.message);
     });
   });
 
@@ -96,7 +98,7 @@ const start = async () => {
     ].forEach(async (k, i) => {
       const client = new JsonRpc(k.url);
       client.call("eth_blockNumber", []).catch((error) => {
-        log.error(error);
+        log.error("provider: " + k.url + ", error:" + error.message);
       }).then((callResult) => {
 
         if (callResult) {
